@@ -1,0 +1,25 @@
+Option Explicit
+
+Private Sub Cstop_Click()
+If Cstop.Caption = "Stop" Then
+scAn = False
+Cstop.Caption = "Close"
+Else
+Unload Me
+End If
+End Sub
+
+Private Sub Form_Load()
+SetFormPojok Me
+End Sub
+
+Private Sub Timer1_Timer()
+On Error GoTo er
+Dim i As Long
+Text1.Text = LokasiD
+i = (100 / Perc) * scannedF
+If i <= 100 Then
+ucProgressBar1.Value = i
+End If
+er:
+End Sub

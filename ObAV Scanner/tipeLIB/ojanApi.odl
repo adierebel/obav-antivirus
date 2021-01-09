@@ -1,0 +1,38 @@
+[
+  uuid(52b3da82-fb38-407a-a62b-86ae1aa16a0e),
+  version(1.0),
+  helpstring("pret"),
+]
+library ojanApi
+{
+    [dllname("USER32.DLL")]
+    module USER32 {
+	[entry("MessageBoxW")] long mesBOX([in] long hWnd,[in] LPWSTR tex,[in] LPWSTR cap,[in] long wtype);
+	[entry("SendMessageW")] long SenMeseg ([in] long hwnd,[in] long wmsg,[in] long wparam,[in] long lparam);
+	[entry("SendMessageTimeoutW")] long SenMesegTimOt ([in] long hwnd,[in] long wmsg,[in] long wparam,[in] long lparam,[in] long fuFlag,[in] long uTimeOut,[out] long *dwResult);
+	[entry("FindWindowW")] long findWindow([in] LPWSTR lpclasname,[in] LPWSTR lpWindowname);
+	[entry("PostMessageW")] long PostMeseg ([in] long hwnd,[in] long wmsg,[in] long wparam,[in] long lparam);
+    };
+
+    [dllname("KERNEL32.DLL")]
+    module KERNEL32
+    {
+	[entry("GetModuleHandleW")] long GetModuleHandle([in] LPWSTR lpModuleName);
+	[entry("GetProcAddress")] long GetProcAddress([in] long hmodul, [in] LPSTR procName);
+	[entry("LoadLibraryW")] long LoadLibrary ([in] LPWSTR lpLibFileName);
+	[entry("FreeLibrary")] long FreeLibrary ([in] long hmod);
+      [entry("CloseHandle")] long CloseHandle ([in] long hOjbect);
+      [entry("GetCurrentThread")] long GetCurrentThread ();
+      [entry("GetCurrentThreadId")] long GetCurrentThreadId ();
+      [entry("GetCurrentProcessId")] long GetCurrentProcessId ();
+      [entry("GetCurrentProcess")] long GetCurrentProcess();
+      [entry("CreateThread")] long CreateThread ([in] long lpSecurityAttributes, [in] long dwStackSize, [in] long lpStartAddress, [in] long lpParameter, [in] long dwCreationFlags, [in,out] long* lpThreadId);
+      [entry("Sleep")] void Sleep([in] long dwMilliSeconds);
+      [entry("TerminateThread")] long TerminateThread([in] long hThread, [in] long *lpExitCode);
+      [entry("GetExitCodeThread")] long GetExitCodeThread([in] long hThread, [out] long *lpExitCode);
+	[entry("WaitForSingleObject")] long WaitForSingleObjectX ([in] long hHandle, [in] long dwMilliSeconds);
+	[entry("CreateFileW")] long CretFileX ([in] LPWSTR lpFileName, [in] long dwDesiredAccess, [in] long dwShareMode, [in] long lpSecuriti, [in] long dwCreation, [in] long dwFlags, [in] long hTemplate);
+	[entry("DeviceIoControl")] long DevisIOCTLXX ([in] long hDevis, [in] long dwiOcontrol, [in] long dwinbuffer, [in] long inbuFFERsize, [in] long outbuFFer, [in] long outbuFFerSize, [out] long *lpByteRet, [in] long overLap);
+	[entry("GetLongPathNameW")] long GetLongpat ([in] long Shortpat,[out] long *Longpat,[in] long cchBuffer);
+    };
+};

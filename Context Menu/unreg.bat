@@ -1,0 +1,1 @@
+regsvr32 /u E:\ScVb\VbBaru\AntiVirus\ObAV1.5\contextmenuext\ContextMenuExt.DLL

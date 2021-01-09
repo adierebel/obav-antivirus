@@ -1,0 +1,40 @@
+
+#include <c:\masm32\include\resource.h>
+
+#define VS_VERSION_INFO	1
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Version
+//
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION 1,0,0,0
+ PRODUCTVERSION 1,0,0,0
+ FILEFLAGSMASK 0x3fL
+ FILEFLAGS 0x0L
+ FILEOS 0x40004L
+ FILETYPE 0x1L
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "040904E4"
+        BEGIN
+            VALUE "Created By", "ojixzzz\0"
+            VALUE "CompanyName", "ObAV Team.\0"
+            VALUE "FileDescription", "Obav Kernel Process Monitoring\0"
+            VALUE "FileVersion", "1, 0, 0, 0\0"
+            VALUE "InternalName", "Obav Kernel Process Monitoring\0"
+            VALUE "LegalCopyright", "Copyright © 2011\0"
+            VALUE "OriginalFilename", "KprocMon.sys\0"
+            VALUE "ProductName", "Obav Kernel Process Monitoring\0"
+            VALUE "ProductVersion", "1, 0, 0, 0\0"
+            VALUE "Compiller", "Microsoft (r) Macro Assembler\0"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x409, 1200
+    END
+END

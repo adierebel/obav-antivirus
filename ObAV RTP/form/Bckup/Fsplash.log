@@ -1,0 +1,4 @@
+Line 18: Class ObAV.ucFrame of control ucFrame1 was not a loaded control class.
+Line 23: The property name _ExtentX in ucFrame1 is invalid.
+Line 24: The property name _ExtentY in ucFrame1 is invalid.
+Line 25: The property name Caption in ucFrame1 is invalid.

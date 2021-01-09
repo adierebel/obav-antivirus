@@ -1,0 +1,8 @@
+SCC = This is a Source Code Control file
+
+[obAV.vbp]
+SCC_Aux_Path =C:\Program Files\Microsoft Visual Studio\Common\VSS,
+SCC_Project_Name =this project is not under source code control
+[ObAV Guard.vbp]
+SCC_Project_Name=this project is not under source code control
+SCC_Aux_Path=<This is an empty string for the mssccprj.scc file>
